@@ -2,6 +2,8 @@
 
 **端侧多模态监护智能体** — 毫米波雷达 + 可穿戴 PPG + 只读调查 Agent + 家长端 App。
 
+[![python-tests](https://github.com/zhangganyu55-glitch/SenseMind-Core/actions/workflows/python-tests.yml/badge.svg)](https://github.com/zhangganyu55-glitch/SenseMind-Core/actions/workflows/python-tests.yml)
+
 本仓库是知微 SenseMind 的**核心源码与硬件设计**：智能体后端（Python / FastAPI）、Android 客户端（Kotlin / Compose）、手表固件（Zephyr / nRF52840）、参数化结构脚本（build123d），以及原理图、BOM、结构图纸等硬件设计文件。
 
 > ⚠️ **研究与黑客松原型，不是医疗器械。** 不具备经过验证的癫痫发作识别能力，不用于真实健康监护、诊断、治疗或紧急报警。详见下方[免责声明](#免责声明)。
