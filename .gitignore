@@ -1,0 +1,72 @@
+# ---- macOS ----
+.DS_Store
+._*
+.AppleDouble
+.LSOverride
+Icon?
+.Spotlight-V100
+.Trashes
+
+# ---- 凭据（绝不入库）----
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa*
+*.p12
+*.jks
+*.keystore
+secrets.json
+credentials*.json
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+*.log
+
+# ---- 运行态 / 构建产物 ----
+build/
+build-cache/
+dist/
+*.o
+*.a
+*.so
+*.dylib
+*.class
+.gradle/
+android/.idea/
+android/app/build/
+local.properties
+west-build/
+zephyr/
+modules/
+tools/
+
+# ---- 数据与模型（体积大 / 第三方版权，单独维护）----
+data/raw/
+data/processed/
+artifacts/
+models/
+*.h5
+*.pkl
+*.part
+*.db
+*.sqlite3
+logs/
+out/
+
+# ---- 临时文件 ----
+*.tmp
+*.swp
+*.bak
+*~
+.DS_Store?

@@ -1,0 +1,1 @@
+{"chip_sel": "AT6010", "connect_config": "uart", "uart": {"com": "5", "baudrate": "115200"}, "usb": "implement_later", "theme": "light"}

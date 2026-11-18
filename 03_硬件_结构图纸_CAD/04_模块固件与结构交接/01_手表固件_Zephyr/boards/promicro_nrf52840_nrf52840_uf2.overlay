@@ -1,0 +1,163 @@
+#include <zephyr/dt-bindings/display/panel.h>
+#include <zephyr/dt-bindings/gpio/gpio.h>
+
+/* Adafruit nRF52 UF2 bootloader 0.6.0 accepts app writes below 0xAD000. */
+&code_partition {
+	reg = <0x00026000 0x00087000>;
+};
+
+/* The M2 application has no persistent flash storage. */
+/delete-node/ &storage_partition;
+
+/* Do not request any NFC or reset-pin UICR changes at startup. */
+&uicr {
+	/delete-property/ nfct-pins-as-gpios;
+	/delete-property/ gpio-as-nreset;
+};
+
+&lfclk {
+	k32src = "rc";
+	k32src-accuracy-ppm = <500>;
+};
+
+/* Radio, native USB, sensor I2C and the ST7789 SPI bus are needed. */
+&uart0 { status = "disabled"; };
+&adc { status = "disabled"; };
+&pwm0 { status = "disabled"; };
+&ieee802154 { status = "disabled"; };
+
+/* GPIO1 is used for the display DC/CS lines (P1.00/P1.07). */
+&gpio1 { status = "okay"; };
+
+/ {
+	leds { status = "disabled"; };
+	pwmleds { status = "disabled"; };
+};
+
+/*
+ * MPU6050 bus on the board's D4/D5 pins: SDA P0.22, SCL P0.24.
+ * D2/D3 (P0.17/P0.20) did not respond reliably on this board.
+ */
+&pinctrl {
+	i2c1_sens: i2c1_sens {
+		group1 {
+			psels = <NRF_PSEL(TWIM_SDA, 0, 22)>,
+				<NRF_PSEL(TWIM_SCL, 0, 24)>;
+			bias-pull-up;
+		};
+	};
+
+	i2c1_sens_sleep: i2c1_sens_sleep {
+		group1 {
+			psels = <NRF_PSEL(TWIM_SDA, 0, 22)>,
+				<NRF_PSEL(TWIM_SCL, 0, 24)>;
+			low-power-enable;
+		};
+	};
+
+	/* ST7789: SCK P1.01, MOSI P1.02.  The panel has no MISO. */
+	spi2_st7789: spi2_st7789 {
+		group1 {
+			psels = <NRF_PSEL(SPIM_SCK, 1, 1)>,
+				<NRF_PSEL(SPIM_MOSI, 1, 2)>;
+		};
+	};
+
+	spi2_st7789_sleep: spi2_st7789_sleep {
+		group1 {
+			psels = <NRF_PSEL(SPIM_SCK, 1, 1)>,
+				<NRF_PSEL(SPIM_MOSI, 1, 2)>;
+			low-power-enable;
+		};
+	};
+};
+
+&spi2 {
+	status = "okay";
+	compatible = "nordic,nrf-spim";
+	pinctrl-0 = <&spi2_st7789>;
+	pinctrl-1 = <&spi2_st7789_sleep>;
+	pinctrl-names = "default", "sleep";
+	cs-gpios = <&gpio1 7 GPIO_ACTIVE_LOW>;
+};
+
+/ {
+	chosen {
+		zephyr,display = &st7789v;
+	};
+
+	buttons {
+		compatible = "gpio-keys";
+
+		button_a: button_a {
+			gpios = <&gpio1 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+			label = "KEY_A";
+		};
+
+		button_b: button_b {
+			gpios = <&gpio1 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+			label = "KEY_B";
+		};
+	};
+
+	mipi_dbi_st7789v: mipi-dbi-spi {
+		compatible = "zephyr,mipi-dbi-spi";
+		spi-dev = <&spi2>;
+		dc-gpios = <&gpio1 0 GPIO_ACTIVE_HIGH>;
+		reset-gpios = <&gpio0 11 GPIO_ACTIVE_LOW>;
+		write-only;
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+		st7789v: st7789v@0 {
+			compatible = "sitronix,st7789v";
+			reg = <0>;
+			mipi-max-frequency = <8000000>;
+			width = <240>;
+			height = <240>;
+			x-offset = <0>;
+			y-offset = <0>;
+			vcom = <0x19>;
+			gctrl = <0x35>;
+			vrhs = <0x12>;
+			vdvs = <0x20>;
+			mdac = <0x00>;
+			gamma = <0x01>;
+			pixel-format = <PANEL_PIXEL_FORMAT_RGB_565>;
+			lcm = <0x2c>;
+			porch-param = [0c 0c 00 33 33];
+			cmd2en-param = [5a 69 02 01];
+			pwctrl1-param = [a4 a1];
+			pvgam-param = [d0 04 0d 11 13 2b 3f 54 4c 18 0d 0b 1f 23];
+			nvgam-param = [d0 04 0c 11 13 2c 3f 44 51 2f 1f 1f 20 23];
+			ram-param = [00 f0];
+			rgb-param = [cd 08 14];
+			mipi-mode = "MIPI_DBI_MODE_SPI_4WIRE";
+		};
+	};
+};
+
+&i2c0 { status = "disabled"; };
+
+&i2c1 {
+	status = "okay";
+	compatible = "nordic,nrf-twi";
+	clock-frequency = <100000>;
+	pinctrl-0 = <&i2c1_sens>;
+	pinctrl-1 = <&i2c1_sens_sleep>;
+	pinctrl-names = "default", "sleep";
+};
+
+/*
+ * P0.13 enables the board's 3.3V/VCC output pins (official board doc:
+ * driving it low cuts power to them). Keep it high from boot.
+ */
+&gpio0 {
+	status = "okay";
+	ext_vcc_en: ext-vcc-en {
+		gpio-hog;
+		gpios = <13 GPIO_ACTIVE_HIGH>;
+		output-high;
+		line-name = "ext-vcc-en";
+	};
+};

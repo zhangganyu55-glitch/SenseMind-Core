@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="297mm" viewBox="0 0 210 297">
+<rect x="0" y="0" width="210" height="297" fill="white"/>
+<text x="10.000" y="10.000" font-family="Helvetica, Arial, sans-serif" font-size="5" fill="#111" text-anchor="start" font-weight="bold">SenseMind 手表 V1 - 1:1 尺寸校验模板</text>
+<text x="10.000" y="15.000" font-family="Helvetica, Arial, sans-serif" font-size="2.8" fill="#444" text-anchor="start" font-weight="normal">标准尺寸假设，不是最终图纸；打印必须 100% / 实际大小（关闭“适合页面”）。实测后改参数。</text>
+<text x="10.000" y="24.000" font-family="Helvetica, Arial, sans-serif" font-size="3" fill="#111" text-anchor="start" font-weight="bold">① 打印比例校准：把银行卡/信用卡放在框内，四边应重合</text>
+<rect x="10.000" y="28.000" width="85.600" height="53.980" rx="0" fill="#f7f7f7" stroke="#111" stroke-width="0.45"/>
+<text x="10.000" y="86.000" font-family="Helvetica, Arial, sans-serif" font-size="2.8" fill="#444" text-anchor="start" font-weight="normal">85.60 × 53.98 mm（标准银行卡尺寸）</text>
+<text x="110.000" y="24.000" font-family="Helvetica, Arial, sans-serif" font-size="3" fill="#111" text-anchor="start" font-weight="bold">② ST7789V 1.54" 模块（假设）</text>
+<rect x="110.000" y="28.000" width="31.500" height="33.700" rx="0" fill="#f2fff9" stroke="#0a7" stroke-width="0.45"/>
+<rect x="111.890" y="30.990" width="27.720" height="27.720" rx="0" fill="none" stroke="#0a7" stroke-width="0.35" stroke-dasharray="2,1"/>
+<text x="125.750" y="65.000" font-family="Helvetica, Arial, sans-serif" font-size="2.6" fill="#0a7" text-anchor="middle" font-weight="normal">31.50 × 33.70 外形</text>
+<text x="125.750" y="68.500" font-family="Helvetica, Arial, sans-serif" font-size="2.6" fill="#0a7" text-anchor="middle" font-weight="normal">有效区 27.72 × 27.72（虚线）</text>
+<text x="125.750" y="72.000" font-family="Helvetica, Arial, sans-serif" font-size="2.6" fill="#a00" text-anchor="middle" font-weight="normal">排针/厚度/显示区偏移待实测</text>
+<text x="10.000" y="96.000" font-family="Helvetica, Arial, sans-serif" font-size="3" fill="#111" text-anchor="start" font-weight="bold">③ 主板与传感器模块</text>
+<rect x="10.000" y="100.000" width="18.000" height="28.000" rx="0" fill="#f2f8ff" stroke="#07a" stroke-width="0.45"/>
+<text x="19.000" y="131.000" font-family="Helvetica, Arial, sans-serif" font-size="2.5" fill="#07a" text-anchor="middle" font-weight="normal">nRF52840 18×28（假设）</text>
+<rect x="35.000" y="100.000" width="20.000" height="15.500" rx="0" fill="#fff8f2" stroke="#a50" stroke-width="0.45"/>
+<text x="45.000" y="118.500" font-family="Helvetica, Arial, sans-serif" font-size="2.5" fill="#a50" text-anchor="middle" font-weight="normal">MAX30102 20×15.5</text>
+<rect x="60.000" y="100.000" width="20.260" height="15.560" rx="0" fill="#fff2ff" stroke="#a0a" stroke-width="0.45"/>
+<text x="70.130" y="118.600" font-family="Helvetica, Arial, sans-serif" font-size="2.5" fill="#a0a" text-anchor="middle" font-weight="normal">MPU6050 20.26×15.56</text>
+<text x="70.130" y="122.000" font-family="Helvetica, Arial, sans-serif" font-size="2.4" fill="#a0a" text-anchor="middle" font-weight="normal">3.0 孔 / 2.54 排针</text>
+<text x="10.000" y="144.000" font-family="Helvetica, Arial, sans-serif" font-size="3" fill="#111" text-anchor="start" font-weight="bold">④ 电池 / 按钮 / USB-C（假设）</text>
+<rect x="10.000" y="148.000" width="20.000" height="30.000" rx="0" fill="#fafafa" stroke="#888" stroke-width="0.45"/>
+<text x="20.000" y="181.000" font-family="Helvetica, Arial, sans-serif" font-size="2.5" fill="#111" text-anchor="middle" font-weight="normal">电池 20×30×4</text>
+<rect x="35.000" y="148.000" width="25.000" height="30.000" rx="0" fill="#fafafa" stroke="#888" stroke-width="0.45"/>
+<text x="47.500" y="181.000" font-family="Helvetica, Arial, sans-serif" font-size="2.5" fill="#111" text-anchor="middle" font-weight="normal">电池 25×30×4.5</text>
+<rect x="68.000" y="148.000" width="6.000" height="6.000" rx="0" fill="#eee" stroke="#333" stroke-width="0.45"/>
+<text x="71.000" y="157.500" font-family="Helvetica, Arial, sans-serif" font-size="2.4" fill="#111" text-anchor="middle" font-weight="normal">按钮 6×6</text>
+<rect x="82.000" y="148.000" width="9.500" height="3.500" rx="0" fill="#eee" stroke="#333" stroke-width="0.45"/>
+<text x="86.750" y="156.000" font-family="Helvetica, Arial, sans-serif" font-size="2.4" fill="#111" text-anchor="middle" font-weight="normal">USB-C 9.5×3.5</text>
+<text x="120.000" y="100.000" font-family="Helvetica, Arial, sans-serif" font-size="3" fill="#111" text-anchor="start" font-weight="bold">⑤ 表壳顶视图（概念 42×46；厚度按堆叠）</text>
+<rect x="120.000" y="120.000" width="42.000" height="46.000" rx="8" fill="none" stroke="#333" stroke-width="0.5"/>
+<rect x="125.250" y="126.150" width="31.500" height="33.700" rx="0" fill="none" stroke="#0a7" stroke-width="0.3" stroke-dasharray="1.5,1"/>
+<text x="141.000" y="110.000" font-family="Helvetica, Arial, sans-serif" font-size="2.5" fill="#111" text-anchor="middle" font-weight="normal">20 mm 表带（耳位）</text>
+<line x1="132.000" y1="116.000" x2="132.000" y2="120.000" stroke="#333" stroke-width="0.5"/>
+<line x1="132.000" y1="166.000" x2="132.000" y2="170.000" stroke="#333" stroke-width="0.5"/>
+<line x1="150.000" y1="116.000" x2="150.000" y2="120.000" stroke="#333" stroke-width="0.5"/>
+<line x1="150.000" y1="166.000" x2="150.000" y2="170.000" stroke="#333" stroke-width="0.5"/>
+<circle cx="162.000" cy="134.000" r="2.600" fill="none" stroke="#333" stroke-width="0.4"/>
+<circle cx="162.000" cy="144.000" r="2.600" fill="none" stroke="#333" stroke-width="0.4"/>
+<text x="165.000" y="135.000" font-family="Helvetica, Arial, sans-serif" font-size="2.2" fill="#111" text-anchor="start" font-weight="normal">按钮</text>
+<text x="165.000" y="145.000" font-family="Helvetica, Arial, sans-serif" font-size="2.2" fill="#111" text-anchor="start" font-weight="normal">按钮</text>
+<rect x="152.000" y="162.500" width="9.500" height="3.500" rx="0" fill="none" stroke="#333" stroke-width="0.4"/>
+<text x="122.000" y="171.000" font-family="Helvetica, Arial, sans-serif" font-size="2.2" fill="#111" text-anchor="start" font-weight="normal">USB-C</text>
+<text x="141.000" y="177.000" font-family="Helvetica, Arial, sans-serif" font-size="2.5" fill="#111" text-anchor="middle" font-weight="normal">表壳 42×46；屏开窗 31.5×33.7</text>
+<text x="10.000" y="250.000" font-family="Helvetica, Arial, sans-serif" font-size="3" fill="#111" text-anchor="start" font-weight="bold">⑥ 50 mm 比例尺（打印后应正好 50 mm）</text>
+<line x1="10.000" y1="256.000" x2="60.000" y2="256.000" stroke="#111" stroke-width="0.6"/>
+<line x1="10.000" y1="256.000" x2="10.000" y2="253.000" stroke="#111" stroke-width="0.4"/>
+<line x1="15.000" y1="256.000" x2="15.000" y2="254.500" stroke="#111" stroke-width="0.4"/>
+<line x1="20.000" y1="256.000" x2="20.000" y2="253.000" stroke="#111" stroke-width="0.4"/>
+<line x1="25.000" y1="256.000" x2="25.000" y2="254.500" stroke="#111" stroke-width="0.4"/>
+<line x1="30.000" y1="256.000" x2="30.000" y2="253.000" stroke="#111" stroke-width="0.4"/>
+<line x1="35.000" y1="256.000" x2="35.000" y2="254.500" stroke="#111" stroke-width="0.4"/>
+<line x1="40.000" y1="256.000" x2="40.000" y2="253.000" stroke="#111" stroke-width="0.4"/>
+<line x1="45.000" y1="256.000" x2="45.000" y2="254.500" stroke="#111" stroke-width="0.4"/>
+<line x1="50.000" y1="256.000" x2="50.000" y2="253.000" stroke="#111" stroke-width="0.4"/>
+<line x1="55.000" y1="256.000" x2="55.000" y2="254.500" stroke="#111" stroke-width="0.4"/>
+<line x1="60.000" y1="256.000" x2="60.000" y2="253.000" stroke="#111" stroke-width="0.4"/>
+<text x="10.000" y="262.000" font-family="Helvetica, Arial, sans-serif" font-size="2.4" fill="#111" text-anchor="start" font-weight="normal">0</text>
+<text x="60.000" y="262.000" font-family="Helvetica, Arial, sans-serif" font-size="2.4" fill="#111" text-anchor="end" font-weight="normal">50 mm</text>
+<text x="10.000" y="270.000" font-family="Helvetica, Arial, sans-serif" font-size="2.6" fill="#444" text-anchor="start" font-weight="normal">说明：标准尺寸仅用于第一版试装；把实物放在对应轮廓上，标记偏差（长/宽/孔位/排针/厚度）。</text>
+<text x="10.000" y="275.000" font-family="Helvetica, Arial, sans-serif" font-size="2.6" fill="#a00" text-anchor="start" font-weight="normal">关键未知：屏模块外形/排针/厚度、SuperMini USB-C/电池焊盘/天线端、MAX30102 光窗中心/厚度、按钮高度、电池实物。</text>
+<text x="10.000" y="280.000" font-family="Helvetica, Arial, sans-serif" font-size="2.6" fill="#444" text-anchor="start" font-weight="normal">参数化脚本：watch_template.py；改上方参数后重新运行即可生成新模板。</text>
+</svg>

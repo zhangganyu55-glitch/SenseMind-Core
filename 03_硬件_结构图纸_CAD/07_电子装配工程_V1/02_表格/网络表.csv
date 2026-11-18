@@ -1,0 +1,24 @@
+﻿网络,源器件,源引脚,目标器件,目标引脚,线色,类别,备注
+3V3,U1 主板,3V3 排针,H1 显示屏,VCC,红,3V3,经 3V3 母线
+3V3,U1 主板,3V3 排针,H2 MAX30102,VIN,红,3V3,经 3V3 母线
+3V3,U1 主板,3V3 排针,H3 MPU6050,VCC,红,3V3,经 3V3 母线
+GND,U1 主板,GND 排针,H1 显示屏,GND,黑,GND,星形汇接
+GND,U1 主板,GND 排针,H2 MAX30102,GND,黑,GND,星形汇接
+GND,U1 主板,GND 排针,H3 MPU6050,GND,黑,GND,星形汇接
+GND,U1 主板,GND 排针,SW1 按键A,脚2,黑,GND,按键共地
+GND,U1 主板,GND 排针,SW2 按键B,脚2,黑,GND,按键共地
+VBAT+,BT1 电池,正极(红),U1 主板,B+ 焊盘,红,VBAT,背面焊盘；保护板在电池端
+VBAT−,BT1 电池,负极(黑),U1 主板,B− 焊盘,黑,VBAT,禁止反接
+LCD_SCK,U1 主板,P1.01,H1 显示屏,SCL,蓝,SPI,SPI2 SCK 8MHz
+LCD_MOSI,U1 主板,P1.02,H1 显示屏,SDA,绿,SPI,SPI2 MOSI；屏无 MISO
+LCD_CS,U1 主板,P1.07,H1 显示屏,CS,橙,SPI,低有效
+LCD_DC,U1 主板,P1.00 (D6),H1 显示屏,DC,紫,SPI,固件 dc-gpios
+LCD_RES,U1 主板,P0.11 (D7),H1 显示屏,RES,棕,SPI,低有效
+LCD_BL,U1 主板,3V3,H1 显示屏,BL,红,SPI,背光常亮，经板载限流
+I2C_SDA,U1 主板,P0.22 (D4),H1/H2/H3,SDA,黄,I2C,共享总线；模块自带 4.7k 上拉
+I2C_SCL,U1 主板,P0.24 (D5),H1/H2/H3,SCL,白,I2C,共享总线；100 kHz
+PPG_INT,H2 MAX30102,INT,U1 主板,未接,—,SIG,固件未使用；可留悬空
+IMU_INT,H3 MPU6050,INT,U1 主板,未接,—,SIG,固件未使用；可留悬空
+IMU_AD0,H3 MPU6050,AD0,GND,GND,黑,SIG,接地 → 地址 0x68（板上已下拉）
+KEY_A,SW1 按键A,脚1,U1 主板,P1.04 (D8),青,KEY,内部上拉，低有效
+KEY_B,SW2 按键B,脚1,U1 主板,P1.06 (D9),青,KEY,内部上拉，低有效

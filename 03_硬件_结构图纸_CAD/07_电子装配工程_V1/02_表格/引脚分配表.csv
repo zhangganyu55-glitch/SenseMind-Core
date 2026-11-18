@@ -1,0 +1,39 @@
+﻿器件,型号/位号,引脚(丝印),功能,方向,连接目标,备注,证据/状态
+U1,主板,3V3,3.3V 输出（受 P0.13 控制）,输出,3V3 母线,—,V1 已验证（H3-05 实机）
+U1,主板,GND,地,—,GND 母线,—,已验证
+U1,主板,P0.22 / D4,GPIO / I2C1 SDA,复用,H2/H3 SDA,LCD? 否,已验证（0x68/0x57 扫描）
+U1,主板,P0.24 / D5,GPIO / I2C1 SCL,复用,H2/H3 SCL,—,已验证
+U1,主板,P1.00 / D6,GPIO,输出,H1 DC,—,固件 overlay
+U1,主板,P0.11 / D7,GPIO,输出,H1 RES,—,固件 overlay
+U1,主板,P1.04 / D8,GPIO 输入（内部上拉）,输入,SW1 KEY_A,—,固件 overlay
+U1,主板,P1.06 / D9,GPIO 输入（内部上拉）,输入,SW2 KEY_B,—,固件 overlay
+U1,主板,P1.01（底焊盘）,SPI2 SCK,复用,H1 SCL,—,固件 pinctrl
+U1,主板,P1.02（底焊盘）,SPI2 MOSI,复用,H1 SDA,—,固件 pinctrl
+U1,主板,P1.07（底焊盘）,GPIO / SPI CS,输出,H1 CS,—,固件 cs-gpios
+U1,主板,P0.13,3V3/VCC 输出使能,输出,内部,不可引出,固件 hog high
+U1,主板,B+ 焊盘,电池正极,电源,BT1 正极,—,板载充电
+U1,主板,B− 焊盘,电池负极,电源,BT1 负极,—,板载充电
+U1,主板,P0.31/P0.29/P1.15/P1.13/P0.10/P0.09,GPIO 保留,—,未接,保留,不占用
+H1,ST7789V,VCC,3.3V,电源,3V3,—,模块标称 3.3V
+H1,ST7789V,GND,地,电源,GND,—,—
+H1,ST7789V,SCL,SPI SCK,输入,U1 P1.01,—,—
+H1,ST7789V,SDA,SPI MOSI,输入,U1 P1.02,—,屏无 MISO
+H1,ST7789V,RES,复位（低有效）,输入,U1 P0.11,—,—
+H1,ST7789V,DC,数据/命令,输入,U1 P1.00,—,—
+H1,ST7789V,CS,片选（低有效）,输入,U1 P1.07,—,—
+H1,ST7789V,BL,背光,电源,3V3,—,模块带限流
+H2,MAX30102,VIN,3.3V,电源,3V3,—,需 3.3V 兼容版
+H2,MAX30102,GND,地,电源,GND,—,—
+H2,MAX30102,SCL,I2C SCL,双向,I2C_SCL,—,0x57
+H2,MAX30102,SDA,I2C SDA,双向,I2C_SDA,—,0x57
+H2,MAX30102,INT,中断,输出,未接,NC,固件未用
+H3,MPU6050,VCC,3.3V,电源,3V3,—,GY-521 带 LDO
+H3,MPU6050,GND,地,电源,GND,—,—
+H3,MPU6050,SCL,I2C SCL,双向,I2C_SCL,—,0x68
+H3,MPU6050,SDA,I2C SDA,双向,I2C_SDA,—,0x68
+H3,MPU6050,AD0,地址选择,输入,GND,—,接地=0x68
+H3,MPU6050,INT,中断,输出,未接,NC,固件未用
+SW1,6×6 轻触,脚1/脚2,KEY_A,开关,P1.04 / GND,—,4 脚按键用对角
+SW2,6×6 轻触,脚1/脚2,KEY_B,开关,P1.06 / GND,—,4 脚按键用对角
+BT1,LiPo 250mAh,正极,VBAT+,电源,U1 B+,—,带保护板
+BT1,LiPo 250mAh,负极,VBAT−,电源,U1 B−,—,禁止反接

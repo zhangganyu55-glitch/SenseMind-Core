@@ -1,0 +1,158 @@
+{
+  "derived": {
+    "disp_front": 2.1,
+    "disp_back": 8.1,
+    "hdr_top": 8.6,
+    "board_top": 11.1,
+    "board_bot": 12.7,
+    "bat_top": 13.2,
+    "bat_bot": 18.2,
+    "carrier_top": 13.0,
+    "carrier_bot": 14.6,
+    "sensor_bot": 18.6,
+    "inner_floor": 18.900000000000002,
+    "body_d": 18.900000000000002,
+    "total": 21.900000000000002,
+    "bat_zone_depth": 18.2,
+    "bat_clear": 0.7000000000000028
+  },
+  "params": {
+    "case_w": 42.0,
+    "case_l": 46.0,
+    "case_r": 9.0,
+    "wall": 2.0,
+    "front_t": 1.8,
+    "back_t": 2.0,
+    "bezel_t": 1.0,
+    "window_w": 28.4,
+    "window_l": 28.4,
+    "window_r": 1.5,
+    "disp_w": 31.5,
+    "disp_l": 33.7,
+    "disp_t": 6.0,
+    "disp_active": 27.72,
+    "disp_front_gap": 0.3,
+    "disp_side_clr": 0.5,
+    "disp_y": 0.0,
+    "board_w": 18.0,
+    "board_l": 28.0,
+    "board_t": 1.6,
+    "hdr_h": 2.5,
+    "board_gap": 0.5,
+    "board_y_top": 7.0,
+    "bat_w": 30.0,
+    "bat_l": 20.0,
+    "bat_t": 4.0,
+    "bat_foam": 1.0,
+    "bat_gap": 0.5,
+    "bat_y_min": 0.8,
+    "bat_y_max": 20.5,
+    "max_w": 15.5,
+    "max_l": 20.0,
+    "max_t": 4.0,
+    "mpu_w": 15.56,
+    "mpu_l": 20.26,
+    "mpu_t": 4.0,
+    "carrier_t": 1.6,
+    "carrier_gap": 0.3,
+    "sensor_y": -10.5,
+    "max_x": -4.56,
+    "mpu_x": 11.0,
+    "opt_w": 10.0,
+    "opt_l": 6.0,
+    "shield_h": 0.4,
+    "opt_gap_to_skin": 0.8,
+    "btn_pitch": 10.0,
+    "btn_y1": 6.0,
+    "btn_y2": -4.0,
+    "btn_cap_d": 3.4,
+    "btn_pocket_d": 6.3,
+    "btn_pocket_depth": 2.2,
+    "usbc_w": 9.5,
+    "usbc_h": 3.5,
+    "usbc_open_w": 13.5,
+    "usbc_open_h": 7.5,
+    "usbc_flange_w": 12.5,
+    "usbc_flange_h": 7.5,
+    "usbc_flange_t": 0.8,
+    "usbc_z": 9.5,
+    "screw_d": 1.6,
+    "boss_od": 3.6,
+    "boss_hole": 1.6,
+    "cbore_d": 3.2,
+    "cbore_t": 1.2,
+    "boss_x": 14.5,
+    "boss_y": 19.5,
+    "strap_w": 20.0,
+    "foam_t": 1.0,
+    "antenna_keepout_w": 15.0,
+    "antenna_keepout_l": 10.0,
+    "lug_len": 6.0,
+    "lug_w": 5.0,
+    "lug_t": 3.5,
+    "lug_z": 2.0,
+    "bar_d": 1.6,
+    "chamfer_top": 0.6,
+    "chamfer_bottom": 0.3,
+    "bezel_reveal": 0.35,
+    "cap_chamfer": 0.5,
+    "cover_reveal": 0.35
+  },
+  "layers": [
+    [
+      "装饰表圈",
+      1.0,
+      "贴在前壳上, 可换色"
+    ],
+    [
+      "前面板 (含屏开窗)",
+      1.8,
+      "屏窗 28.4, 压边 0.34/侧"
+    ],
+    [
+      "屏前间隙",
+      0.3,
+      ""
+    ],
+    [
+      "ST7789V 模块 (含 8-pin 排针)",
+      6.0,
+      "needs-confirmation"
+    ],
+    [
+      "屏-主板间隙",
+      0.5,
+      ""
+    ],
+    [
+      "主板排针",
+      2.5,
+      "needs-confirmation"
+    ],
+    [
+      "主板 PCB",
+      1.6,
+      ""
+    ],
+    [
+      "主板-电池间隙",
+      0.5,
+      ""
+    ],
+    [
+      "电池 + 泡棉",
+      5.0,
+      "20 x 30 x 4 + 1.0"
+    ],
+    [
+      "电池仓底",
+      0.0,
+      "托板"
+    ],
+    [
+      "下盖",
+      2.0,
+      "含光学窗"
+    ]
+  ]
+}

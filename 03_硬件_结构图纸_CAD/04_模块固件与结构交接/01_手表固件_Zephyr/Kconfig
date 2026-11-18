@@ -1,0 +1,13 @@
+mainmenu "SenseMind nRF52840"
+source "Kconfig.zephyr"
+config SENSEMIND_TEST_DATA
+    bool "Generate explicitly marked test samples instead of reading physical sensors"
+    default n
+
+config SENSEMIND_BRINGUP_LOG
+    bool "Print sensor bring-up diagnostics to the USB console"
+    default n
+
+config SENSEMIND_BOOTLOADER_CMD
+    bool "Allow the USB console command 'boot' to reboot into the UF2 bootloader"
+    default n

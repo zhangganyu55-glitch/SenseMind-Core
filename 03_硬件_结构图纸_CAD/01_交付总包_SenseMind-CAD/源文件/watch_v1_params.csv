@@ -1,0 +1,81 @@
+﻿name,value_mm,status,source,notes
+case_w,42,assumed,concept 42x46,概念外形，实测屏幕/主板后可调；内腔 38x42
+case_l,46,assumed,concept 42x46,
+case_r,9,assumed,concept R9,外圆角
+wall,2,assumed,FDM 1.8-2.0,FDM 原型壁厚；树脂/注塑可 1.4
+front_t,1.8,assumed,design,前面板厚，含屏开窗
+back_t,2,assumed,design,下盖厚
+bezel_t,1,assumed,design,装饰表圈，贴在前面板上
+window_w,28.4,assumed,27.72 + 压边,开窗 28.4 = 有效区 + 0.68；两侧各压 0.34，满足 <=0.4 要求
+window_l,28.4,assumed,27.72 + 压边,
+window_r,1.5,assumed,design,开窗圆角
+disp_w,31.5,needs-confirmation,同系列裸屏 31.52,8-pin 转接板模块，必须实测
+disp_l,33.7,needs-confirmation,同系列裸屏 33.72,必须实测
+disp_t,6,needs-confirmation,assumption,含 8-pin 排针总厚；排针高度是厚度主要来源
+disp_active,27.72,measured,"1.54"" 240x240 datasheet",有效显示区 27.72
+disp_front_gap,0.3,assumed,design,屏面到前面板间隙
+disp_side_clr,0.5,assumed,design,屏仓侧向间隙
+disp_y,0,assumed,design,屏中心 Y
+board_w,18,needs-confirmation,网上同板,SuperMini 18x28，必须实测
+board_l,28,needs-confirmation,网上同板,
+board_t,1.6,assumed,PCB 1.6,
+hdr_h,2.5,needs-confirmation,assumption,2.54 排针焊好后高度；去排针可减 2.5+ mm
+board_gap,0.5,assumed,design,屏背到排针顶
+board_y_top,7,assumed,design,主板 +Y 端（天线端）位置；-Y 端=USB-C 端
+bat_w,30,assumed,recommended 20x30x4,沿 X 30，沿 Y 20（转 90 放置）
+bat_l,20,assumed,recommended 20x30x4,沿 Y 20
+bat_t,4,assumed,recommended,200-300mAh 典型
+bat_foam,1,assumed,design,泡棉垫片
+bat_gap,0.5,assumed,design,主板到电池
+bat_y_min,0.8,assumed,layout,电池仓 Y 起点（12 点侧）
+bat_y_max,20.5,assumed,layout,
+max_w,15.5,assumed,vendor image 20x15.5,已按 90 度旋转：15.5 沿 X
+max_l,20,assumed,vendor image,20 沿 Y
+max_t,4,needs-confirmation,assumption,含元件/排针
+mpu_w,15.56,assumed,vendor drawing 20.26x15.56,已旋转：15.56 沿 X
+mpu_l,20.26,assumed,vendor drawing,20.26 沿 Y
+mpu_t,4,needs-confirmation,assumption,
+carrier_t,1.6,assumed,design,传感器载板 1.6 PCB
+carrier_gap,0.3,assumed,design,主板到载板
+sensor_y,-10.5,assumed,layout,传感器中心 Y（6 点侧）；光窗随之偏 9.7
+max_x,-4.56,assumed,layout,光窗中心 X = -4.56（内腔宽度限制，无法正好居中）
+mpu_x,11,assumed,layout,MPU 靠 3 点侧
+opt_w,10,assumed,design,光学窗 10x6，需实测 MAX30102 光窗中心
+opt_l,6,assumed,design,
+shield_h,0.4,assumed,design,黑色泡棉遮光圈压缩后厚度（0.3-0.5）
+opt_gap_to_skin,0.8,assumed,handoff 0.5-1,光窗到皮肤
+btn_pitch,10,assumed,handoff,两键中心距 10
+btn_y1,6,assumed,handoff A 上,3 点方向 Y=+6
+btn_y2,-4,assumed,handoff B 下,
+btn_cap_d,3.4,assumed,typical 6x6 tact,按帽直径，需实测
+btn_pocket_d,6.3,assumed,6x6 switch body,内侧让位孔
+btn_pocket_depth,2.2,assumed,design,
+usbc_w,9.5,needs-confirmation,handoff 9.5x3.5,按实物连接器复核
+usbc_h,3.5,needs-confirmation,handoff,
+usbc_open_w,13.5,assumed,design,端盖内嵌段
+usbc_open_h,7.5,assumed,design,
+usbc_flange_w,12.5,assumed,design,端盖法兰
+usbc_flange_h,7.5,assumed,design,
+usbc_flange_t,0.8,assumed,design,法兰厚度
+usbc_z,9.5,needs-confirmation,board layout,USB-C 中心深度，由主板实测决定
+screw_d,1.6,assumed,handoff M1.6,M1.6 自攻/热熔
+boss_od,3.6,assumed,design,M1.6 柱外径
+boss_hole,1.6,assumed,design,自攻底孔
+cbore_d,3.2,assumed,design,下盖沉头
+cbore_t,1.2,assumed,design,
+boss_x,14.5,assumed,layout,螺丝柱 X
+boss_y,19.5,assumed,layout,螺丝柱 Y
+strap_w,20,assumed,concept,20mm 表带
+foam_t,1,assumed,design,
+antenna_keepout_w,15,assumed,handoff 15x10,天线禁布区
+antenna_keepout_l,10,assumed,handoff,
+lug_len,6,assumed,design,表耳伸出长度（沿 Y）
+lug_w,5,assumed,design,单个表耳宽；两耳内侧间距 = strap_w
+lug_t,3.5,assumed,design,表耳厚度（沿 Z）
+lug_z,2,assumed,design,表耳上表面距前面板
+bar_d,1.6,assumed,spring bar Ø1.6,生耳孔；实测表带生耳后改
+chamfer_top,0.6,assumed,design,外壳顶面倒角 (ID 精致度)
+chamfer_bottom,0.3,assumed,design,外壳底面倒角 + 接缝阴影线
+bezel_reveal,0.35,assumed,design,"表圈比壳体小 0.35 → 四周 0.175 缝隙, 形成接缝线"
+cap_chamfer,0.5,assumed,design,按键帽边缘倒角
+cover_reveal,0.35,assumed,design,下盖比壳体小 0.35 → 底部接缝阴影线

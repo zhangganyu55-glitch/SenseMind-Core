@@ -1,0 +1,538 @@
+{
+  "_readme": "SenseMind H3-05 手表 V1 参数表（唯一数据源）。改这里的数字后重新运行 watch_v1_cad.py 即可重生全部 STEP/STL/CSV。status: measured / assumed / needs-confirmation。所有 assumed 必须实测后改。单位 mm。",
+  "params": {
+    "case_w": 42.0,
+    "case_l": 48.0,
+    "case_r": 9.0,
+    "wall": 2.0,
+    "front_t": 1.8,
+    "back_t": 2.0,
+    "bezel_t": 1.0,
+    "window_w": 28.4,
+    "window_l": 28.4,
+    "window_r": 1.5,
+    "disp_w": 31.5,
+    "disp_l": 31.0,
+    "disp_t": 3.5,
+    "disp_active": 27.72,
+    "disp_front_gap": 0.3,
+    "disp_side_clr": 0.5,
+    "disp_y": 0.0,
+    "board_w": 17.5,
+    "board_l": 33.5,
+    "board_t": 1.2,
+    "hdr_h": 2.5,
+    "board_gap": 0.5,
+    "board_y_top": 12.5,
+    "bat_w": 25.0,
+    "bat_l": 20.0,
+    "bat_t": 5.0,
+    "bat_foam": 0.2,
+    "bat_gap": 0.5,
+    "bat_y_min": 1.5,
+    "bat_y_max": 21.5,
+    "max_w": 15.5,
+    "max_l": 20.0,
+    "max_t": 2.8,
+    "mpu_w": 15.56,
+    "mpu_l": 20.26,
+    "mpu_t": 2.8,
+    "carrier_t": 1.6,
+    "carrier_gap": 0.3,
+    "sensor_y": -9.5,
+    "max_x": -7.6,
+    "mpu_x": 8.3,
+    "opt_w": 10.0,
+    "opt_l": 6.0,
+    "shield_h": 0.4,
+    "opt_gap_to_skin": 0.8,
+    "btn_pitch": 10.0,
+    "btn_y1": 6.0,
+    "btn_y2": -4.0,
+    "btn_cap_d": 3.4,
+    "btn_pocket_d": 6.3,
+    "btn_pocket_depth": 2.2,
+    "usbc_w": 9.5,
+    "usbc_h": 3.5,
+    "usbc_open_w": 13.5,
+    "usbc_open_h": 7.5,
+    "usbc_flange_w": 12.5,
+    "usbc_flange_h": 7.5,
+    "usbc_flange_t": 0.8,
+    "usbc_z": 9.5,
+    "screw_d": 1.6,
+    "boss_od": 3.6,
+    "boss_hole": 1.6,
+    "cbore_d": 3.2,
+    "cbore_t": 1.2,
+    "boss_x": 14.5,
+    "boss_y": 19.5,
+    "strap_w": 20.0,
+    "foam_t": 1.0,
+    "antenna_keepout_w": 15.0,
+    "antenna_keepout_l": 10.0,
+    "lug_len": 6.0,
+    "lug_w": 5.0,
+    "lug_t": 3.5,
+    "lug_z": 2.0,
+    "bar_d": 1.6,
+    "chamfer_top": 0.6,
+    "chamfer_bottom": 0.3,
+    "bezel_reveal": 0.35,
+    "cap_chamfer": 0.5,
+    "cover_reveal": 0.35,
+    "screw_points": [
+      "-18.2,-12.0",
+      "18.2,-12.0",
+      "-18.2,12.0",
+      "18.2,12.0"
+    ]
+  },
+  "meta": {
+    "case_w": {
+      "status": "assumed",
+      "source": "concept 42x46",
+      "notes": "概念外形，实测屏幕/主板后可调；内腔 38x42"
+    },
+    "case_l": {
+      "status": "assumed",
+      "source": "concept 42x46",
+      "notes": "由 46 加到 48：传感器簇 32x20.3 + 电池 20 沿 Y 排开需要 42+ 的内腔"
+    },
+    "case_r": {
+      "status": "assumed",
+      "source": "concept R9",
+      "notes": "外圆角"
+    },
+    "wall": {
+      "status": "assumed",
+      "source": "FDM 1.8-2.0",
+      "notes": "FDM 原型壁厚；树脂/注塑可 1.4"
+    },
+    "front_t": {
+      "status": "assumed",
+      "source": "design",
+      "notes": "前面板厚，含屏开窗"
+    },
+    "back_t": {
+      "status": "assumed",
+      "source": "design",
+      "notes": "下盖厚"
+    },
+    "bezel_t": {
+      "status": "assumed",
+      "source": "design",
+      "notes": "装饰表圈，贴在前面板上"
+    },
+    "window_w": {
+      "status": "assumed",
+      "source": "27.72 + 压边",
+      "notes": "开窗 28.4 = 有效区 + 0.68；两侧各压 0.34，满足 <=0.4 要求"
+    },
+    "window_l": {
+      "status": "assumed",
+      "source": "27.72 + 压边",
+      "notes": ""
+    },
+    "window_r": {
+      "status": "assumed",
+      "source": "design",
+      "notes": "开窗圆角"
+    },
+    "disp_w": {
+      "status": "measured",
+      "source": "游标卡尺实测 2026-11-03",
+      "notes": "实测 31.5"
+    },
+    "disp_l": {
+      "status": "measured",
+      "source": "游标卡尺实测 2026-11-03",
+      "notes": "实测 31.0"
+    },
+    "disp_t": {
+      "status": "measured",
+      "source": "游标卡尺实测 2026-11-03",
+      "notes": "实测：屏+排针总厚 3.5"
+    },
+    "disp_active": {
+      "status": "measured",
+      "source": "1.54\" 240x240 datasheet",
+      "notes": "有效显示区 27.72"
+    },
+    "disp_front_gap": {
+      "status": "assumed",
+      "source": "design",
+      "notes": "屏面到前面板间隙"
+    },
+    "disp_side_clr": {
+      "status": "assumed",
+      "source": "design",
+      "notes": "屏仓侧向间隙"
+    },
+    "disp_y": {
+      "status": "assumed",
+      "source": "design",
+      "notes": "屏中心 Y"
+    },
+    "board_w": {
+      "status": "measured",
+      "source": "游标卡尺实测 2026-11-03",
+      "notes": "实测 17.5"
+    },
+    "board_l": {
+      "status": "measured",
+      "source": "游标卡尺实测 2026-11-03",
+      "notes": "实测 33.5（ProMicro NRF52840 33x17.78，不是 SuperMini 18x28）"
+    },
+    "board_t": {
+      "status": "measured",
+      "source": "游标卡尺实测 2026-11-03",
+      "notes": "实测 1.2"
+    },
+    "hdr_h": {
+      "status": "measured",
+      "source": "游标卡尺实测 2026-11-03",
+      "notes": "实测：排针露出 2.5"
+    },
+    "board_gap": {
+      "status": "assumed",
+      "source": "design",
+      "notes": "屏背到排针顶"
+    },
+    "board_y_top": {
+      "status": "assumed",
+      "source": "design",
+      "notes": "板 33.5 长，-Y 端贴 USB-C 开口，+Y 端到 12.5"
+    },
+    "bat_w": {
+      "status": "measured",
+      "source": "游标卡尺实测 2026-11-03",
+      "notes": "实测 长25 -> 沿 X"
+    },
+    "bat_l": {
+      "status": "measured",
+      "source": "游标卡尺实测 2026-11-03",
+      "notes": "实测 宽20 -> 沿 Y"
+    },
+    "bat_t": {
+      "status": "measured",
+      "source": "游标卡尺实测 2026-11-03",
+      "notes": "实测：502025 本体厚 5.0"
+    },
+    "bat_foam": {
+      "status": "assumed",
+      "source": "设计取值",
+      "notes": "改为 0.2 双面胶（VHB），不再是泡棉"
+    },
+    "bat_gap": {
+      "status": "assumed",
+      "source": "design",
+      "notes": "主板到电池"
+    },
+    "bat_y_min": {
+      "status": "assumed",
+      "source": "layout",
+      "notes": "电池 y 1.5..21.5"
+    },
+    "bat_y_max": {
+      "status": "assumed",
+      "source": "layout",
+      "notes": ""
+    },
+    "max_w": {
+      "status": "assumed",
+      "source": "vendor image 20x15.5",
+      "notes": "已按 90 度旋转：15.5 沿 X"
+    },
+    "max_l": {
+      "status": "assumed",
+      "source": "vendor image",
+      "notes": "20 沿 Y"
+    },
+    "max_t": {
+      "status": "measured",
+      "source": "游标卡尺实测 2026-11-03",
+      "notes": "实测：模块总厚 2.8（含排针）"
+    },
+    "mpu_w": {
+      "status": "assumed",
+      "source": "vendor drawing 20.26x15.56",
+      "notes": "已旋转：15.56 沿 X"
+    },
+    "mpu_l": {
+      "status": "assumed",
+      "source": "vendor drawing",
+      "notes": "20.26 沿 Y"
+    },
+    "mpu_t": {
+      "status": "measured",
+      "source": "游标卡尺实测 2026-11-03",
+      "notes": "实测：模块总厚 2.8（含排针）"
+    },
+    "carrier_t": {
+      "status": "assumed",
+      "source": "design",
+      "notes": "传感器载板 1.6 PCB"
+    },
+    "carrier_gap": {
+      "status": "assumed",
+      "source": "design",
+      "notes": "主板到载板"
+    },
+    "sensor_y": {
+      "status": "assumed",
+      "source": "layout",
+      "notes": "传感器簇 y -19.85..0.85，给电池留出 0.65 间隙"
+    },
+    "max_x": {
+      "status": "assumed",
+      "source": "layout",
+      "notes": "整体左移 0.5，避让 -Y 螺丝柱(x 16.4..19)"
+    },
+    "mpu_x": {
+      "status": "assumed",
+      "source": "layout",
+      "notes": "右移到 8.3，模块最外缘 16.08，离螺丝柱 0.32"
+    },
+    "opt_w": {
+      "status": "assumed",
+      "source": "design",
+      "notes": "光学窗 10x6，需实测 MAX30102 光窗中心"
+    },
+    "opt_l": {
+      "status": "assumed",
+      "source": "design",
+      "notes": ""
+    },
+    "shield_h": {
+      "status": "assumed",
+      "source": "design",
+      "notes": "黑色泡棉遮光圈压缩后厚度（0.3-0.5）"
+    },
+    "opt_gap_to_skin": {
+      "status": "assumed",
+      "source": "handoff 0.5-1",
+      "notes": "光窗到皮肤"
+    },
+    "btn_pitch": {
+      "status": "assumed",
+      "source": "handoff",
+      "notes": "两键中心距 10"
+    },
+    "btn_y1": {
+      "status": "assumed",
+      "source": "handoff A 上",
+      "notes": "3 点方向 Y=+6"
+    },
+    "btn_y2": {
+      "status": "assumed",
+      "source": "handoff B 下",
+      "notes": ""
+    },
+    "btn_cap_d": {
+      "status": "assumed",
+      "source": "typical 6x6 tact",
+      "notes": "按帽直径，需实测"
+    },
+    "btn_pocket_d": {
+      "status": "assumed",
+      "source": "6x6 switch body",
+      "notes": "内侧让位孔"
+    },
+    "btn_pocket_depth": {
+      "status": "assumed",
+      "source": "design",
+      "notes": ""
+    },
+    "usbc_w": {
+      "status": "needs-confirmation",
+      "source": "handoff 9.5x3.5",
+      "notes": "按实物连接器复核"
+    },
+    "usbc_h": {
+      "status": "needs-confirmation",
+      "source": "handoff",
+      "notes": ""
+    },
+    "usbc_open_w": {
+      "status": "assumed",
+      "source": "design",
+      "notes": "端盖内嵌段"
+    },
+    "usbc_open_h": {
+      "status": "assumed",
+      "source": "design",
+      "notes": ""
+    },
+    "usbc_flange_w": {
+      "status": "assumed",
+      "source": "design",
+      "notes": "端盖法兰"
+    },
+    "usbc_flange_h": {
+      "status": "assumed",
+      "source": "design",
+      "notes": ""
+    },
+    "usbc_flange_t": {
+      "status": "assumed",
+      "source": "design",
+      "notes": "法兰厚度"
+    },
+    "usbc_z": {
+      "status": "needs-confirmation",
+      "source": "board layout",
+      "notes": "USB-C 中心深度，由主板实测决定"
+    },
+    "screw_d": {
+      "status": "assumed",
+      "source": "handoff M1.6",
+      "notes": "M1.6 自攻/热熔"
+    },
+    "boss_od": {
+      "status": "assumed",
+      "source": "design",
+      "notes": "M1.6 柱外径"
+    },
+    "boss_hole": {
+      "status": "assumed",
+      "source": "design",
+      "notes": "自攻底孔"
+    },
+    "cbore_d": {
+      "status": "assumed",
+      "source": "design",
+      "notes": "下盖沉头"
+    },
+    "cbore_t": {
+      "status": "assumed",
+      "source": "design",
+      "notes": ""
+    },
+    "boss_x": {
+      "status": "assumed",
+      "source": "layout",
+      "notes": "螺丝柱 X"
+    },
+    "boss_y": {
+      "status": "assumed",
+      "source": "layout",
+      "notes": "螺丝柱 Y"
+    },
+    "strap_w": {
+      "status": "assumed",
+      "source": "concept",
+      "notes": "20mm 表带"
+    },
+    "foam_t": {
+      "status": "assumed",
+      "source": "design",
+      "notes": ""
+    },
+    "antenna_keepout_w": {
+      "status": "assumed",
+      "source": "handoff 15x10",
+      "notes": "天线禁布区"
+    },
+    "antenna_keepout_l": {
+      "status": "assumed",
+      "source": "handoff",
+      "notes": ""
+    },
+    "lug_len": {
+      "status": "assumed",
+      "source": "design",
+      "notes": "表耳伸出长度（沿 Y）"
+    },
+    "lug_w": {
+      "status": "assumed",
+      "source": "design",
+      "notes": "单个表耳宽；两耳内侧间距 = strap_w"
+    },
+    "lug_t": {
+      "status": "assumed",
+      "source": "design",
+      "notes": "表耳厚度（沿 Z）"
+    },
+    "lug_z": {
+      "status": "assumed",
+      "source": "design",
+      "notes": "表耳上表面距前面板"
+    },
+    "bar_d": {
+      "status": "assumed",
+      "source": "spring bar Ø1.6",
+      "notes": "生耳孔；实测表带生耳后改"
+    },
+    "chamfer_top": {
+      "status": "assumed",
+      "source": "design",
+      "notes": "外壳顶面倒角 (ID 精致度)"
+    },
+    "chamfer_bottom": {
+      "status": "assumed",
+      "source": "design",
+      "notes": "外壳底面倒角 + 接缝阴影线"
+    },
+    "bezel_reveal": {
+      "status": "assumed",
+      "source": "design",
+      "notes": "表圈比壳体小 0.35 → 四周 0.175 缝隙, 形成接缝线"
+    },
+    "cap_chamfer": {
+      "status": "assumed",
+      "source": "design",
+      "notes": "按键帽边缘倒角"
+    },
+    "cover_reveal": {
+      "status": "assumed",
+      "source": "design",
+      "notes": "下盖比壳体小 0.35 → 底部接缝阴影线"
+    },
+    "screw_points": {
+      "status": "assumed",
+      "source": "layout v1.2",
+      "notes": "4 颗 M1.6 位置。+Y 两颗挪到 ±X 侧壁, 否则与 30 mm 宽电池撞"
+    }
+  },
+  "verified": {
+    "checked_on": "2026-11-03",
+    "board": {
+      "name": "nRF52840 SuperMini（实物印 ProMicro NRF52840 V1940，同一块板的两种叫法，待商家确认）",
+      "charger_ic": "TP4056",
+      "charge_voltage_v": 4.2,
+      "charge_current_default_ma": 100,
+      "charge_current_boost_ma": 300,
+      "boost_rule": "厂家原文：连接 BOOST 跳线后 100mA→300mA，只有电池大于 500mAh 时才这样做，以避免爆炸",
+      "battery_pads": "BATTERY+ x2 + 相邻 GND，位于正面、与 USB-C 同一端",
+      "boost_jumper": "位于背面 RST/VCC 角，丝印 ABOOST",
+      "peripheral_power_switch": "P0.13 拉低即关闭 3.3V~VCC 外设供电",
+      "idle_current_ma": 1,
+      "source": "官方GPIO与SWD引脚图.jpg 红框原文 + 商家答复(2026-11-03)"
+    },
+    "battery": {
+      "model": "502025",
+      "capacity_mah": 250,
+      "nominal_v": 3.7,
+      "size_mm": [
+        25,
+        20,
+        5
+      ],
+      "protection_board": "DW01A + 8205A",
+      "protection_spec": "过充 4.3±0.5V / 恢复 4.1±0.5V / 过放 2.4±0.5V / 恢复 3±1V / 过流 3.3±0.5A / 静态 6uA",
+      "cell_spec": "GB31241；标准充电 0.5C，快充 1C；CV 4.2V；放电截止 2.75V；-10~60C；持续放电 0.5C，最大 1C",
+      "source": "商家商品图(2026-11-03)"
+    },
+    "decision": {
+      "boost_jumper": "不接。250mAh 下 100mA=0.4C 合规；300mA=1.2C 超电芯规格且违反厂家警告",
+      "protection": "TP4056 无过放/过流/反接保护，必须依赖电池自带保护板",
+      "open_items": [
+        "充电终止电压实测（TP4056 上限 4.263V vs 保护板下限 4.25V，最坏情况擦边）",
+        "3.3V/VCC 外设可持续电流",
+        "BATTERY+ 焊盘尺寸与到板边距离",
+        "带保护板后的电池总外形尺寸"
+      ]
+    }
+  }
+}
